@@ -184,6 +184,7 @@ public class pokerGameActivity extends AppCompatActivity implements View.OnClick
         downoadrealtime();
         setListenerToEndAllGame();//שיהיה בינתיים
         toastToEveryOneListener();//שיהיה בינתיים
+        listenerToMoneyChanged();
 
     }
 
@@ -306,6 +307,8 @@ public class pokerGameActivity extends AppCompatActivity implements View.OnClick
                         yourMoney=numStart;
                         openTableUserDetails(emailsInGame,numToEach);
                         numInPot=Integer.parseInt(""+tableDetails.get("numInPot"));
+                        setListenerToChangeRound();
+                        listenerToEndGame();
                     }
                     catch (Exception e){
                         Toast.makeText(pokerGameActivity.this,"eror",Toast.LENGTH_SHORT).show();
@@ -663,8 +666,6 @@ public class pokerGameActivity extends AppCompatActivity implements View.OnClick
 
 
     public void listenerToChangeTurn(){
-        setListenerToChangeRound();
-        listenerToEndGame();
         listenerToChangeTurn= dataBaseRef.child("pokerTableGames").child("activeGames").child(""+tableNum).child("tableDetails").child("turn").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -2749,6 +2750,37 @@ public class pokerGameActivity extends AppCompatActivity implements View.OnClick
                 Toast.makeText(pokerGameActivity.this, "eror", Toast.LENGTH_SHORT).show();
             }
         });
+
+    }
+
+    public void listenerToMoneyChanged(){
+        if(usersArrListInGame.size()==2){
+            dataBaseRef.child("pokerTableGames").child("activeGames").child(""+tableNum).child("tableDetails").child("usersDetails").child((usersArrListInGame.get(0).getEmail()).replace("*",".")).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.getValue()!=null) {
+                        player1TextViewMoney.setText(Integer.parseInt(dataSnapshot.getValue()+""));
+                    }
+                }
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    Toast.makeText(pokerGameActivity.this, "eror", Toast.LENGTH_SHORT).show();
+                }
+            });
+            dataBaseRef.child("pokerTableGames").child("activeGames").child(""+tableNum).child("tableDetails").child("usersDetails").child((usersArrListInGame.get(1).getEmail()).replace("*",".")).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.getValue()!=null) {
+                        player2TextViewMoney.setText(Integer.parseInt(dataSnapshot.getValue()+""));
+                    }
+                }
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    Toast.makeText(pokerGameActivity.this, "eror", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        }
 
     }
 }
