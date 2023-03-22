@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#634C4C"
+    android:layoutDirection="ltr">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="הסבר על החידון:"
+        android:textSize="30dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:textStyle="bold"
+        android:layout_margin="15dp"
+        android:id="@+id/tvExplainQuiz"
+        android:text="אתה תוכל להשתמש בעזרה טלפונית לשאלה אחת. כאשר תבחר להשתמש בעזרה אז תוכל לעשות שיחה אחת למשך 40 שניות עם החבר והתומה לחזור ולענות על השאלה."
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="חזור"
+            android:textStyle="bold"
+            android:id="@+id/btnBackToQuestion"
+            android:backgroundTint="#454545"
+            android:layout_margin="20dp"
+            ></Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="השתמש בעזרה"
+            android:textStyle="bold"
+            android:layout_margin="20dp"
+            android:id="@+id/btnUseTheHelpPhone"
+            android:backgroundTint="#454545"
+            ></Button>
+
+    </LinearLayout>
+
+
+</LinearLayout>

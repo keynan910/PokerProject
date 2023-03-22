@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/mainPage"
+        android:orderInCategory="1"
+        android:title="Main"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/signInPage"
+        android:orderInCategory="2"
+        android:title="Sign in"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/signUpPage"
+        android:orderInCategory="3"
+        android:title="Sign up"
+        app:showAsAction="never"
+        />
+
+
+    <item
+        android:id="@+id/leaderboard"
+        android:orderInCategory="4"
+        android:title="leaderboard"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/aboutPage"
+        android:orderInCategory="5"
+        android:title="about page"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/disconnect"
+        android:orderInCategory="5"
+        android:title="disconnect"
+        app:showAsAction="never"
+        />
+
+    <item
+
+        android:id="@+id/profileStatus"
+        android:orderInCategory="6"
+        android:icon="@drawable/userimage"
+        android:title="profileStatus"
+        app:showAsAction="always"></item>
+
+
+
+</menu>

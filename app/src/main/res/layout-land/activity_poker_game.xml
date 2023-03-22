@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pokerGameActivity"
+    android:layoutDirection="ltr"
+    android:keepScreenOn="true"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:id="@+id/LinearLayoutToRaiseButton"
+    android:orientation="vertical"></LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="1200dp"
+        android:layout_height="800dp"
+        android:background="@drawable/backgroundpokertablenew"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495">
+
+        <TextView
+            android:id="@+id/textViewTimer"
+            android:layout_width="107dp"
+            android:layout_height="62dp"
+            android:gravity="center"
+            android:text="00:12"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.36"></TextView>
+
+        <TextView
+            android:id="@+id/textViewWinner"
+            android:layout_width="295dp"
+            android:layout_height="75dp"
+            android:gravity="center"
+            android:text="textViewWinner"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.594"></TextView>
+
+        <ImageView
+            android:id="@+id/yourturniconplayer1"
+            android:layout_width="86dp"
+            android:layout_height="85dp"
+            android:src="@drawable/yourturnicon"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.602"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.64"></ImageView>
+
+        <ImageView
+            android:layout_width="86dp"
+            android:layout_height="85dp"
+            android:src="@drawable/yourturnicon"
+            android:visibility="gone"
+            android:id="@+id/yourturniconplayer2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.777"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.329"></ImageView>
+
+        <ImageView
+            android:id="@+id/yourturniconplayer3"
+            android:layout_width="86dp"
+            android:layout_height="85dp"
+            android:src="@drawable/yourturnicon"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.351"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.273"></ImageView>
+
+
+        <ImageView
+            android:id="@+id/yourturniconplayer4"
+            android:layout_width="86dp"
+            android:layout_height="85dp"
+            android:src="@drawable/yourturnicon"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.381"></ImageView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="75dp"
+            android:layout_height="101dp"
+            app:cardCornerRadius="20dp"
+            android:id="@+id/cardParent1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.34"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.685"
+            >
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="75dp"
+                android:layout_height="95dp"
+                android:id="@+id/myCardNumber1"
+                ></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myCardParent2"
+            android:layout_width="75dp"
+            android:layout_height="101dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.268"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.685">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="75dp"
+                android:layout_height="95dp"
+                android:id="@+id/myCardNumber2"
+                ></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFlopParent1"
+            android:layout_width="70dp"
+            android:layout_height="113dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.629"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.489">
+
+            <ImageView
+                android:id="@+id/cardFlopNumber1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFlopParent2"
+            android:layout_width="70dp"
+            android:layout_height="113dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.566"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.489">
+
+            <ImageView
+                android:id="@+id/cardFlopNumber2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFlopParent3"
+            android:layout_width="70dp"
+            android:layout_height="113dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintVertical_bias="0.489">
+
+            <ImageView
+                android:id="@+id/cardFlopNumber3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFlopParent4"
+            android:layout_width="70dp"
+            android:layout_height="113dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.489">
+
+            <ImageView
+                android:id="@+id/cardFlopNumber4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFlopParent5"
+            android:layout_width="70dp"
+            android:layout_height="113dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.377"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.489">
+
+            <ImageView
+                android:id="@+id/cardFlopNumber5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvRaisedplayer1"
+            android:layout_width="119dp"
+            android:layout_height="71dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.543"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.632"></TextView>
+
+        <TextView
+            android:id="@+id/tvRaisedplayer2"
+            android:layout_width="72dp"
+            android:layout_height="185dp"
+            android:gravity="center"
+            android:rotation="90"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.752"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.415"></TextView>
+
+        <TextView
+            android:id="@+id/tvRaisedplayer4"
+            android:layout_width="68dp"
+            android:layout_height="116dp"
+            android:gravity="center"
+            android:rotation="90"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.245"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.489"></TextView>
+
+        <TextView
+            android:id="@+id/tvRaisedplayer3"
+            android:layout_width="153dp"
+            android:layout_height="53dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.343"></TextView>
+
+        <ImageView
+            android:id="@+id/btnWhatDidPlayer1Icon"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:visibility="visible"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.632" />
+
+        <ImageView
+            android:id="@+id/btnWhatDidPlayer2Icon"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:rotation="90"
+            android:visibility="visible"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.753"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.56" />
+
+        <ImageView
+            android:id="@+id/btnWhatDidPlayer3Icon"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:visibility="visible"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.587"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.342" />
+
+        <ImageView
+            android:id="@+id/btnWhatDidPlayer4Icon"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:rotation="90"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.265"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.356" />
+
+        <ImageButton
+            android:id="@+id/raisebtnIcon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/raiseiconpoker"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.819"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.702" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="80dp"
+            android:layout_height="238dp"
+            android:alpha="1"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/raisebtnIcon"
+            android:id="@+id/constraintRaise"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.829"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1">
+
+            <SeekBar
+                android:layout_width="250dp"
+                android:layout_height="20dp"
+                android:id="@+id/SeekbarRaise"
+                android:rotation="270"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></SeekBar>
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="64dp"
+                android:id="@+id/tvRaise"
+                android:rotation="270"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageButton
+            android:id="@+id/callbtnicon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/calliconpoker"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.749"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.702" />
+
+        <ImageButton
+            android:id="@+id/foldbtnicon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/foldiconpoker"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.678"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.702" />
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="85dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.139"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            android:rotation="270">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/player4constraintlayout"
+                android:layout_width="240dp"
+                android:layout_height="85dp"
+                android:alpha="0.7"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/player4TextViewName"
+                    android:layout_width="153dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:text="player 4"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/player4TextViewMoney"
+                    app:layout_constraintEnd_toStartOf="@+id/player4ProfileImage"
+                    app:layout_constraintHorizontal_bias="0.652"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"></TextView>
+
+                <TextView
+                    android:id="@+id/player4TextViewMoney"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="money: 10"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/player4ProfileImage"
+                    app:layout_constraintHorizontal_bias="0.65"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.975"></TextView>
+
+                <ImageView
+                    android:id="@+id/player4ProfileImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.99"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.444"></ImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/player2constraintlayout"
+        android:layout_width="220dp"
+        android:layout_height="85dp"
+        android:alpha="0.7"
+        android:visibility="visible"
+        android:rotation="90"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="1.109"
+        app:layout_constraintVertical_bias="0.42">
+
+        <TextView
+            android:id="@+id/player2TextViewName"
+            android:layout_width="153dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:text="player 1"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/player2TextViewMoney"
+            app:layout_constraintEnd_toStartOf="@+id/player2ProfileImage"
+            app:layout_constraintHorizontal_bias="0.652"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"></TextView>
+
+        <TextView
+            android:id="@+id/player2TextViewMoney"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="money: 10"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/player2ProfileImage"
+            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.975"></TextView>
+
+        <ImageView
+            android:id="@+id/player2ProfileImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.99"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.444"></ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/player3constraintlayout"
+        android:layout_width="258dp"
+        android:layout_height="58dp"
+        android:alpha="0.7"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/player1constraintlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <TextView
+            android:id="@+id/player3TextViewName"
+            android:layout_width="153dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:text="player 3"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/player3TextViewMoney"
+            app:layout_constraintEnd_toStartOf="@+id/player3ProfileImage"
+            app:layout_constraintHorizontal_bias="0.652"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"></TextView>
+
+        <TextView
+            android:id="@+id/player3TextViewMoney"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="money: 10"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/player3ProfileImage"
+            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.975"></TextView>
+
+        <ImageView
+            android:id="@+id/player3ProfileImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.99"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.444"></ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/player1constraintlayout"
+        android:layout_width="258dp"
+        android:layout_height="62dp"
+        android:alpha="0.7"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+        <TextView
+            android:id="@+id/player1TextViewName"
+            android:layout_width="153dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:text="player 1"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/player1TextViewMoney"
+            app:layout_constraintEnd_toStartOf="@+id/player1ProfileImage"
+            app:layout_constraintHorizontal_bias="0.652"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"></TextView>
+
+        <TextView
+            android:id="@+id/player1TextViewMoney"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="money: 10"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/player1ProfileImage"
+            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.975"></TextView>
+
+        <ImageView
+            android:id="@+id/player1ProfileImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.99"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.444"></ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

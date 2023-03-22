@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/pokerbackgroundtomain"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    >
+
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/LinearLayoutProfileStatus"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:translationZ="1dp"
+        >
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/imageProfileStatus"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/userimage"></ImageView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="userName"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:id="@+id/userNameProfileStatus"
+            android:textSize="20dp"
+            ></TextView>
+        <HorizontalScrollView
+            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:fadingEdge="horizontal"
+            >
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email:"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:id="@+id/emailProfileStatus">
+            </TextView>
+            </HorizontalScrollView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="69"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:id="@+id/pointsProfileStatus"
+            ></TextView>
+            </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="עמוד המשחקים"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+       ></TextView>
+
+    <TextView
+        android:id="@+id/nameAndChooseQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+
+        android:text="הירשם ולאחר מכן בחר משחק"
+        android:textColor="@color/black"
+        android:textSize="23dp"
+        android:textStyle="bold"
+
+        ></TextView>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:gravity="bottom">
+
+        <TableRow
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:gravity="center">
+
+
+            <FrameLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ib2"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/pokerbackground"
+                    ></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:paddingRight="25dp"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/white"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="10"
+                    android:text="Poker Game"
+                    android:textColor="#000000"
+                    android:textSize="25dp"></TextView>
+            </FrameLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ib1"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/foodimage"
+                    ></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:paddingRight="25dp"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/white"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="10"
+                    android:text="Poker Quiz"
+                    android:textColor="#000000"
+                    android:textSize="25dp"></TextView>
+            </FrameLayout>
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/erortv"
+        android:textSize="20dp"
+        android:text=""
+        android:textColor="@color/black"
+        ></TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:id="@+id/btnSignUp"
+        android:layout_margin="20dp"
+        android:text="sign up"
+        android:backgroundTint="#AA0660AE"
+        ></Button>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:id="@+id/btnSignIn"
+            android:text="sign in"
+            android:backgroundTint="#AA0660AE"
+            ></Button>
+</LinearLayout>
+    <Button
+        android:layout_width="135dp"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:id="@+id/btnDisconnect"
+        android:text="Disconnect"
+        android:backgroundTint="#AA0660AE"
+        android:visibility="gone"
+        ></Button>
+
+    </LinearLayout>
+

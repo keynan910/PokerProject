@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">quizProject</string>
+    <string name="fireBaseGetInstance">https://quizproject-8e8ae-default-rtdb.europe-west1.firebasedatabase.app/</string>
+    <string name="about_title">About My Poker Games App</string>
+    <string name="about_description">Welcome to my poker games app! This app contains two exciting poker games for you to enjoy. Whether youre a seasoned pro or just learning the ropes, our games are sure to provide hours of entertainment. So grab your lucky deck and lets play!</string>
+
+    <string name="question1">מאיזה מדינה מגיע הפיצה והפסטה</string>
+    <string name="question2">ממה מורכב הפלאפל</string>
+    <string name="question3">מאיזה מדינה מגיע השניצל וינאי והשטרודל</string>
+    <string name="question4">איזה מאכל לא הומצא בישראל</string>
+    <string name="question5">כמה שלבים יש בפרמידת המזון</string>
+    <string name="question6">הפסטה שייכת לקבוצת __________.</string>
+    <string name="question7">איפה הומצא הגלידה</string>
+    <string name="question8">מי גילה את הקקאו</string>
+    <string name="question9">איפה הומצא הוניל</string>
+    <string name="question10">איפה הומצא הקטשופ</string>
+
+    <string name="question1Ans1">אמריקה</string>
+    <string name="question1Ans2">גרמניה</string>
+    <string name="question1Ans3">איטליה</string>
+    <string name="question1Ans4">אנגליה</string>
+
+    <string name="question2Ans1">חומוס</string>
+    <string name="question2Ans2">טחינה</string>
+    <string name="question2Ans3">מיונז</string>
+    <string name="question2Ans4">עדשים</string>
+
+    <string name="question3Ans1">גרמניה</string>
+    <string name="question3Ans2">אוסטריה</string>
+    <string name="question3Ans3">הודו</string>
+    <string name="question3Ans4">ארצות הברית</string>
+
+    <string name="question4Ans1">במבה</string>
+    <string name="question4Ans2">שקדי מרק</string>
+    <string name="question4Ans3">עגבניות שרי</string>
+    <string name="question4Ans4">חומוס</string>
+
+    <string name="question5Ans1">5</string>
+    <string name="question5Ans2">4</string>
+    <string name="question5Ans3">7</string>
+    <string name="question5Ans4">3</string>
+
+    <string name="question6Ans1">חלבונים</string>
+    <string name="question6Ans2">מתוקים</string>
+    <string name="question6Ans3">פחמימות</string>
+    <string name="question6Ans4">שומנים</string>
+
+    <string name="question7Ans1">ארצות הברית</string>
+    <string name="question7Ans2">יפן</string>
+    <string name="question7Ans3">סין</string>
+    <string name="question7Ans4">הולנד</string>
+
+    <string name="question8Ans1">האמריקיים</string>
+    <string name="question8Ans2">הסינים</string>
+    <string name="question8Ans3">ההודים</string>
+    <string name="question8Ans4">האירופיים</string>
+
+    <string name="question9Ans1">אוסטריה</string>
+    <string name="question9Ans2">צרפת</string>
+    <string name="question9Ans3">ישראל</string>
+    <string name="question9Ans4">מקסיקו</string>
+
+    <string name="question10Ans1">ישראל</string>
+    <string name="question10Ans2">לונדון</string>
+    <string name="question10Ans3">סין</string>
+    <string name="question10Ans4">ארצות הברית</string>
+
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="email_id">Email Id</string>
+    <string name="password">Password</string>
+    <string name="id">Already have an account?</string>
+    <string name="submit">Submit</string>
+    <string name="login">Log In</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="new_user_register_now">New User?Register Now</string>
+    <string name="todo">TODO</string>
+
+
+
+</resources>
