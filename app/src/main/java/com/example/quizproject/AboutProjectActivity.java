@@ -8,10 +8,7 @@ import android.animation.ObjectAnimator;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,7 +19,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -91,14 +87,14 @@ public class AboutProjectActivity extends AppCompatActivity implements View.OnCl
         int id = item.getItemId();
         Intent intent;
         if (id == R.id.signInPage) {
-            intent = new Intent(this, signInActivity.class);
+            intent = new Intent(this, SignInActivity.class);
             startActivity(intent);
         }
         else if (id == R.id.signUpPage) {
-            intent = new Intent(this, signUpActivity.class);
+            intent = new Intent(this, SignUpActivity.class);
             startActivity(intent);
         } else if (id == R.id.leaderboard) {
-            intent = new Intent(this, winnersActivity.class);
+            intent = new Intent(this, WinnersActivity.class);
             intent.putExtra( "points",-1);
             startActivity(intent);
         } else if (id == R.id.mainPage) {

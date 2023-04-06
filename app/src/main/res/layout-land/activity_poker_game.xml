@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pokerGameActivity"
+    tools:context=".PokerGameActivity"
     android:layoutDirection="ltr"
     android:keepScreenOn="true"
     >
@@ -244,7 +244,7 @@
 
         <TextView
             android:id="@+id/tvRaisedplayer1"
-            android:layout_width="119dp"
+            android:layout_width="136dp"
             android:layout_height="71dp"
             android:gravity="center"
             android:text=""
@@ -253,14 +253,14 @@
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.543"
+            app:layout_constraintHorizontal_bias="0.56"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.632"></TextView>
 
         <TextView
             android:id="@+id/tvRaisedplayer2"
-            android:layout_width="72dp"
+            android:layout_width="80dp"
             android:layout_height="185dp"
             android:gravity="center"
             android:rotation="90"

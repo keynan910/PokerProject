@@ -4,66 +4,70 @@
     <string name="about_title">About My Poker Games App</string>
     <string name="about_description">Welcome to my poker games app! This app contains two exciting poker games for you to enjoy. Whether youre a seasoned pro or just learning the ropes, our games are sure to provide hours of entertainment. So grab your lucky deck and lets play!</string>
 
-    <string name="question1">מאיזה מדינה מגיע הפיצה והפסטה</string>
-    <string name="question2">ממה מורכב הפלאפל</string>
-    <string name="question3">מאיזה מדינה מגיע השניצל וינאי והשטרודל</string>
-    <string name="question4">איזה מאכל לא הומצא בישראל</string>
-    <string name="question5">כמה שלבים יש בפרמידת המזון</string>
-    <string name="question6">הפסטה שייכת לקבוצת __________.</string>
-    <string name="question7">איפה הומצא הגלידה</string>
-    <string name="question8">מי גילה את הקקאו</string>
-    <string name="question9">איפה הומצא הוניל</string>
-    <string name="question10">איפה הומצא הקטשופ</string>
+    <string name="question1">מהו היד הגבוהה ביותר בפוקר טקסס הולדם?</string>
+    <string name="question1Ans1">סטרייט פלאש</string>
+    <string name="question1Ans2">רויאל פלאש</string>
+    <string name="question1Ans3">ארבעה זוגות</string>
+    <string name="question1Ans4">פול האוס</string>
 
-    <string name="question1Ans1">אמריקה</string>
-    <string name="question1Ans2">גרמניה</string>
-    <string name="question1Ans3">איטליה</string>
-    <string name="question1Ans4">אנגליה</string>
+    <string name="question2">מהו המינימום של מספר השחקנים הנדרשים להתחיל משחק פוקר?</string>
+    <string name="question2Ans1">שניים</string>
+    <string name="question2Ans2">שלושה</string>
+    <string name="question2Ans3">ארבעה</string>
+    <string name="question2Ans4">חמישה</string>
 
-    <string name="question2Ans1">חומוס</string>
-    <string name="question2Ans2">טחינה</string>
-    <string name="question2Ans3">מיונז</string>
-    <string name="question2Ans4">עדשים</string>
+    <string name="question3">מהו שם הסיבוב בו נפתחים 3 קלפים על השולחן בפוקר?</string>
+    <string name="question3Ans1">נהר(ריבר)</string>
+    <string name="question3Ans2">פלופ</string>
+    <string name="question3Ans3">טרן</string>
+    <string name="question3Ans4">פרי-פלופ</string>
 
-    <string name="question3Ans1">גרמניה</string>
-    <string name="question3Ans2">אוסטריה</string>
-    <string name="question3Ans3">הודו</string>
-    <string name="question3Ans4">ארצות הברית</string>
+    <string name="question4">מהו שם היד בה יש לשחקן חמישה קלפים בעלי אותו סוג בפוקר?</string>
+    <string name="question4Ans1">זוג4</string>
+    <string name="question4Ans2">סטרייט</string>
+    <string name="question4Ans3">שלושה זוגות</string>
+    <string name="question4Ans4">פלאש</string>
 
-    <string name="question4Ans1">במבה</string>
-    <string name="question4Ans2">שקדי מרק</string>
-    <string name="question4Ans3">עגבניות שרי</string>
-    <string name="question4Ans4">חומוס</string>
+    <string name="question5">מהו הקלף החזק ביותר בפוקר?</string>
+    <string name="question5Ans1">קלף התותח</string>
+    <string name="question5Ans2">האס</string>
+    <string name="question5Ans3">המלך</string>
+    <string name="question5Ans4">הג\'וקר</string>
 
-    <string name="question5Ans1">5</string>
-    <string name="question5Ans2">4</string>
-    <string name="question5Ans3">7</string>
-    <string name="question5Ans4">3</string>
+    <string name="question6">באיזה שלב השחקנים יכולים להחליט לפרוש מהמשחק?</string>
+    <string name="question6Ans1">טרן</string>
+    <string name="question6Ans2">פרי-פלופ</string>
+    <string name="question6Ans3">פלופ</string>
+    <string name="question6Ans4">בכל שלב של המשחק</string>
 
-    <string name="question6Ans1">חלבונים</string>
-    <string name="question6Ans2">מתוקים</string>
-    <string name="question6Ans3">פחמימות</string>
-    <string name="question6Ans4">שומנים</string>
 
-    <string name="question7Ans1">ארצות הברית</string>
-    <string name="question7Ans2">יפן</string>
-    <string name="question7Ans3">סין</string>
-    <string name="question7Ans4">הולנד</string>
+    <string name="question7">כמה קלפים יש בחפיסת קלפי פוקר סטנדרטית?</string>
+    <string name="question7Ans1">52</string>
+    <string name="question7Ans2">54</string>
+    <string name="question7Ans3">50</string>
+    <string name="question7Ans4">48</string>
 
-    <string name="question8Ans1">האמריקיים</string>
-    <string name="question8Ans2">הסינים</string>
-    <string name="question8Ans3">ההודים</string>
-    <string name="question8Ans4">האירופיים</string>
+    <string name="question8">איזה מהבאים אינו יד פוקר תקפה?</string>
+    <string name="question8Ans1">זוג</string>
+    <string name="question8Ans2">שלשה</string>
+    <string name="question8Ans3">שלושה זוגות</string>
+    <string name="question8Ans4">רביעייה</string>
 
-    <string name="question9Ans1">אוסטריה</string>
-    <string name="question9Ans2">צרפת</string>
-    <string name="question9Ans3">ישראל</string>
-    <string name="question9Ans4">מקסיקו</string>
+    <string name="question9">איזה מהבאים אינו יד פוקר תקפה?</string>
+    <string name="question9Ans1">זוג</string>
+    <string name="question9Ans2">שלשה</string>
+    <string name="question9Ans3">שלושה זוגות</string>
+    <string name="question9Ans4">רביעייה</string>
 
-    <string name="question10Ans1">ישראל</string>
-    <string name="question10Ans2">לונדון</string>
-    <string name="question10Ans3">סין</string>
-    <string name="question10Ans4">ארצות הברית</string>
+    <string name="question10">איזה מהבאים יד מנצחת?</string>
+    <string name="question10Ans1">A,A,A,6,5</string>
+    <string name="question10Ans2">Q,Q,Q,5,5</string>
+    <string name="question10Ans3">2,2,2,2,5</string>
+    <string name="question10Ans4">5,6,7,8,9</string>
+
+
+
+
 
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->

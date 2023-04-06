@@ -13,4 +13,13 @@
     <color name="noTimeAnswerColor">#AAADB6B6</color>
     <color name="rightAnswerColor">#AA1FB615</color>
     <color name="nothing">#00B41717</color>
+    <color name="beautiful_day_button_gradient_start">#1DB2DA</color>
+    <color name="beautiful_day_button_gradient_end">#073F51</color>
+    <color name="menu_item_text_color">#FFFFFF</color>
+    <color name="menu_item_icon_color">#FFFFFF</color>
+    <color name="menu_item_background_color">#1E88E5</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+
+
 </resources>

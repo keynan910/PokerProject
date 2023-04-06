@@ -21,4 +21,5 @@
     <style name="Theme.LogInPage.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.LogInPage.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

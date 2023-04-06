@@ -1,101 +1,40 @@
 package com.example.quizproject;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.SupportActionModeWrapper;
-import androidx.core.app.ActivityCompat;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
-import androidx.core.content.ContextCompat;
 
-
-import android.Manifest;
-import android.animation.ObjectAnimator;
-import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.app.Dialog;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.content.ClipData;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.transition.Transition;
-import android.transition.TransitionInflater;
-import android.util.Base64;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.animation.PathInterpolator;
-import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.MetadataChanges;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
-import java.io.ByteArrayOutputStream;
-import java.nio.file.Path;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
     TextView tvExplainQuiz, nameAndChooseQuiz;
     Dialog explainQuizDialog;
     ImageButton foodQuizImageButton,pokerGameImageButton;
-    Button btnFinishDialog, btnBackDialog, btnSignUp, btnSignIn, btnDisconnect;
+    Button btnFinishDialog, btnBackDialog;
+    ImageButton btnDisconnect;
+    ImageButton btnSignUp,btnSignIn;
     String chosenQuizName;
     private FirebaseAuth mAuth;
     FirebaseUser user;
+    FrameLayout disconnectFrameLayout;
     SharedPreferences sp;
     boolean profileStatusOn=false;
     SharedPreferences.Editor edit;
     FirebaseFirestore db;
     int num=0;
+    LinearLayout linearLayout;
 
 
 
@@ -124,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //
         pokerGameImageButton = findViewById(R.id.ib2);
         pokerGameImageButton.setOnClickListener(this);
+        pokerGameImageButton.setBackgroundResource(R.drawable.pokerimagetomain);
         //
         btnSignIn = findViewById(R.id.btnSignIn);
         btnSignUp = findViewById(R.id.btnSignUp);
@@ -132,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSignUp.setOnClickListener(this);
         btnDisconnect = findViewById(R.id.btnDisconnect);
         btnDisconnect.setOnClickListener(this);
+        linearLayout=findViewById(R.id.linearLayout);
+        disconnectFrameLayout=findViewById(R.id.disconnectFrameLayout);
         user = mAuth.getCurrentUser();
         if (user != null) {
             String name = user.getDisplayName();
@@ -142,11 +84,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 nameAndChooseQuiz.setText("היי " + name + " בחר משחק");
 
             }
-            btnDisconnect.setVisibility(View.VISIBLE);
+            disconnectFrameLayout.setVisibility(View.VISIBLE);
+            linearLayout.setVisibility(View.GONE);
             ///////create listener to notifications
 
         } else {
-            btnDisconnect.setVisibility(View.GONE);
+            disconnectFrameLayout.setVisibility(View.GONE);
+            linearLayout.setVisibility(View.VISIBLE);
             nameAndChooseQuiz.setText("הירשם ולאחר מכן בחר משחק");
         }
 
@@ -165,14 +109,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             btnFinishDialog = explainQuizDialog.findViewById(R.id.btnFinishDialog);
             btnBackDialog = explainQuizDialog.findViewById(R.id.btnBackDialog);
             tvExplainQuiz = explainQuizDialog.findViewById(R.id.tvExplainQuiz);
-            tvExplainQuiz.setText("חידון האוכל מתבצע כך שהשחקן מתחיל עם 3 לבבות לאחר שהשחקן טעה בשלושה שאלות המשחק נגמר. בכל שאלה יש אפשרות לזכות במספר נקודות שונה, ככל שהתשובה נענת יותר מהר כך מספר הנקודות על השאלה עולה בסוף המשחק יופיע מספר הנקודות שצבר השחקן ומה שיא נקודותיו בחידון האוכל");
+            tvExplainQuiz.setText("חידון הפוקר מתבצע כך שהשחקן מתחיל עם 3 לבבות לאחר שהשחקן טעה בשלושה שאלות המשחק נגמר. בכל שאלה יש אפשרות לזכות במספר נקודות שונה, ככל שהתשובה נענת יותר מהר כך מספר הנקודות על השאלה עולה בסוף המשחק יופיע מספר הנקודות שצבר השחקן ומה שיא נקודותיו בחידון הפוקר");
             btnFinishDialog.setOnClickListener(this);
             btnBackDialog.setOnClickListener(this);
             explainQuizDialog.show();
         } else if (btnSignIn == v) {
             if (user == null) {
                 Intent it;
-                it = new Intent(this, signInActivity.class);
+                it = new Intent(this, SignInActivity.class);
                 startActivity(it);
             } else {
                 Toast.makeText(this, " אתה מחובר כבר" + user.getDisplayName(), Toast.LENGTH_SHORT).show();
@@ -180,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (btnSignUp == v) {
             if (user == null) {
                 Intent it;
-                it = new Intent(this, signUpActivity.class);
+                it = new Intent(this, SignUpActivity.class);
                 startActivity(it);
             } else {
                 Toast.makeText(this, " אתה מחובר כבר" + user.getDisplayName(), Toast.LENGTH_SHORT).show();
@@ -190,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v == btnFinishDialog) {
             Intent it = new Intent();
             if (chosenQuizName.equals("food")) {
-                it = new Intent(this, foodActivity.class);
+                it = new Intent(this, QuizActivity.class);
                 startActivity(it);
             }
         } else if (btnDisconnect == v) {
@@ -204,15 +148,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (pokerGameImageButton==v && user != null){
             Intent it;
-            it = new Intent(this, pokerGameFindTable.class);
+            it = new Intent(this, PokerGameFindTable.class);
             startActivity(it);
 
 
         }
     }
 
-    //ActionBar
 
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.mainmenu, menu);
@@ -238,18 +182,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return true;
     }
 
+ */
+/*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         Intent intent;
         if (id == R.id.signInPage) {
-            intent = new Intent(this, signInActivity.class);
+            intent = new Intent(this, SignInActivity.class);
             startActivity(intent);
         } else if (id == R.id.signUpPage) {
-            intent = new Intent(this, signUpActivity.class);
+            intent = new Intent(this, SignUpActivity.class);
             startActivity(intent);
         } else if (id == R.id.leaderboard) {
-            intent = new Intent(this, winnersActivity.class);
+            intent = new Intent(this, WinnersActivity.class);
             intent.putExtra( "points",-1);
             startActivity(intent);
         } else if (id == R.id.mainPage) {
@@ -358,6 +304,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         return true;
     }
+*/
+
 
 
 

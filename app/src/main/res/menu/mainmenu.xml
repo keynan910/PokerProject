@@ -1,56 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/mainPage"
         android:orderInCategory="1"
         android:title="Main"
         app:showAsAction="never"
+        android:icon="@drawable/main_icon"
         />
+
     <item
         android:id="@+id/signInPage"
         android:orderInCategory="2"
         android:title="Sign in"
         app:showAsAction="never"
-        />
+        android:icon="@drawable/sign_in_icon"
+         />
 
     <item
         android:id="@+id/signUpPage"
         android:orderInCategory="3"
         android:title="Sign up"
         app:showAsAction="never"
+        android:icon="@drawable/sign_up_icon"
         />
-
 
     <item
         android:id="@+id/leaderboard"
         android:orderInCategory="4"
-        android:title="leaderboard"
+        android:title="Leaderboard"
         app:showAsAction="never"
+        android:icon="@drawable/leaderboard_icon"
         />
+
     <item
         android:id="@+id/aboutPage"
         android:orderInCategory="5"
-        android:title="about page"
+        android:title="About"
         app:showAsAction="never"
-        />
+        android:icon="@drawable/about_icon"
+         />
+
     <item
         android:id="@+id/disconnect"
-        android:orderInCategory="5"
-        android:title="disconnect"
+        android:orderInCategory="6"
+        android:title="Disconnect"
         app:showAsAction="never"
+        android:icon="@drawable/disconnect_icon"
         />
 
     <item
-
         android:id="@+id/profileStatus"
-        android:orderInCategory="6"
-        android:icon="@drawable/userimage"
-        android:title="profileStatus"
-        app:showAsAction="always"></item>
-
-
+        android:orderInCategory="7"
+        android:title="Profile"
+        app:showAsAction="always"
+        android:icon="@drawable/userimage" />
 
 </menu>

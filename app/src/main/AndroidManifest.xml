@@ -23,7 +23,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".pokerGameActivity"
+            android:name=".PokerGameActivity"
             android:exported="false"
             android:screenOrientation="landscape">
             <meta-data
@@ -31,35 +31,35 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".pokerGameFindTable"
+            android:name=".PokerGameFindTable"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".winnersActivity"
+            android:name=".WinnersActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".signUpActivity"
+            android:name=".SignUpActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".signInActivity"
+            android:name=".SignInActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".foodActivity"
+            android:name=".QuizActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -70,7 +70,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <!-- Mention the service name here -->
+        <service android:name=".BackgroundMusic"/>
     </application>
 
 </manifest>
