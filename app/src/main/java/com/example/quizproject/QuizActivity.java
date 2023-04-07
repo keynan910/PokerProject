@@ -2,10 +2,13 @@ package com.example.quizproject;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -54,7 +57,8 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     Question[] questionsArr;
     int indexOfCurrentQuestion;
     ImageView heartImage1,heartImage2,heartImage3;
-    LinearLayout MainLinearLayout,LinearLayoutHearts;
+    LinearLayout LinearLayoutHearts;
+    ConstraintLayout MainLinearLayout;
     ImageButton helpFifty,helpPhoneFriend;
     Dialog phoneDialog,loadingpage;
     int miliSecondsRemainingToStartAgain;
@@ -63,6 +67,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     SharedPreferences.Editor edit;
     boolean useButtonPhone;
     TextView tvanswers1,tvanswers2,tvanswers3,tvanswers4;
+    CardView CardStartQuiz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,11 +119,32 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         tvanswers2=findViewById(R.id.tvanswers2);
         tvanswers3=findViewById(R.id.tvanswers3);
         tvanswers4=findViewById(R.id.tvanswers4);
+        CardStartQuiz=findViewById(R.id.CardStartQuiz);
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser == null){
             Intent it=new Intent(this,MainActivity.class);
             startActivity(it);
         }
+        coolDown = new CountDownTimer(1500, 1000) {
+            public void onTick(long millisUntilFinished) {
+                btnAnswer1.setAlpha(1);
+                btnAnswer2.setAlpha(1);
+                btnAnswer3.setAlpha(1);
+                btnAnswer4.setAlpha(1);
+                btnAnswer1.setClickable(false);
+                btnAnswer2.setClickable(false);
+                btnAnswer3.setClickable(false);
+                btnAnswer4.setClickable(false);
+            }
+
+            public void onFinish() {
+                btnAnswer1.setClickable(true);
+                btnAnswer2.setClickable(true);
+                btnAnswer3.setClickable(true);
+                btnAnswer4.setClickable(true);
+                startQuiz();
+            }
+        };
     }
 
     @Override
@@ -126,6 +152,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         if (btnStartQuiz == v) {
             btnStartQuiz.setClickable(false);
             btnStartQuiz.setVisibility(View.GONE);
+            CardStartQuiz.setVisibility(View.GONE);
             createHeartsAndPoints();
             new CountDownTimer(3000, 1) {
 
@@ -209,26 +236,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 String[] timeHelpArr = time.split("\n");
                 String[] timeArr = timeHelpArr[1].split(":");
                 int sumOfTime = Integer.parseInt(timeArr[0]) * 60000 + Integer.parseInt(timeArr[1]) * 1000;
-                coolDown = new CountDownTimer(1500, 1000) {
-                    public void onTick(long millisUntilFinished) {
-                        btnAnswer1.setAlpha(1);
-                        btnAnswer2.setAlpha(1);
-                        btnAnswer3.setAlpha(1);
-                        btnAnswer4.setAlpha(1);
-                        btnAnswer1.setClickable(false);
-                        btnAnswer2.setClickable(false);
-                        btnAnswer3.setClickable(false);
-                        btnAnswer4.setClickable(false);
-                    }
-
-                    public void onFinish() {
-                        btnAnswer1.setClickable(true);
-                        btnAnswer2.setClickable(true);
-                        btnAnswer3.setClickable(true);
-                        btnAnswer4.setClickable(true);
-                        startQuiz();
-                    }
-                };
                 if (btnAnswer1 == v) {
                     answerAlready = true;
                     endQuestion(true, 1, sumOfTime);
@@ -432,7 +439,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 @Override
                 public void onFinish() {
-                    btnAnswer1.setBackgroundColor(getResources().getColor(R.color.blueColor));
+                    btnAnswer1.setBackground(getDrawable(R.drawable.button_round_corners));
                 }
             }.start();
         }
@@ -444,7 +451,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 @Override
                 public void onFinish() {
-                    btnAnswer2.setBackgroundColor(getResources().getColor(R.color.blueColor));
+                    btnAnswer2.setBackground(getDrawable(R.drawable.button_round_corners));
                 }
             }.start();
         }
@@ -456,7 +463,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 @Override
                 public void onFinish() {
-                    btnAnswer3.setBackgroundColor(getResources().getColor(R.color.blueColor));
+                    btnAnswer3.setBackground(getDrawable(R.drawable.button_round_corners));
                 }
             }.start();
         }
@@ -468,7 +475,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 @Override
                 public void onFinish() {
-                    btnAnswer4.setBackgroundColor(getResources().getColor(R.color.blueColor));
+                    btnAnswer4.setBackground(getDrawable(R.drawable.button_round_corners));
                 }
             }.start();
         }

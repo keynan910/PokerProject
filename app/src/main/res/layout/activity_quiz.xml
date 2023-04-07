@@ -23,11 +23,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.128"></TextView>
-
+        app:layout_constraintVertical_bias="0.068"></TextView>
 
     <TextView
         android:id="@+id/questionsTv"
@@ -41,10 +40,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205"></TextView>
-
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.05"></TextView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView1"
@@ -54,11 +53,11 @@
         android:layout_height="80dp"
         app:cardCornerRadius="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38">
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0">
 
         <ImageButton
             android:id="@+id/btnAnswer1"
@@ -79,8 +78,7 @@
             android:text="תשובה א"
             android:textColor="@color/white"
             android:textSize="17dp"
-            android:textStyle="bold"
-            ></TextView>
+            android:textStyle="bold"></TextView>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -94,8 +92,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38">
+        app:layout_constraintTop_toBottomOf="@+id/questionsTv"
+        app:layout_constraintVertical_bias="0.13">
 
         <ImageButton
             android:id="@+id/btnAnswer2"
@@ -128,8 +126,8 @@
         app:cardCornerRadius="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cardView4"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:layout_constraintVertical_bias="0.1">
 
@@ -191,18 +189,20 @@
             android:textStyle="bold"></TextView>
     </androidx.cardview.widget.CardView>
 
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="top"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807">
+        app:layout_constraintVertical_bias="0.832">
 
         <ImageButton
             android:id="@+id/helpPhoneFriend"
@@ -227,8 +227,7 @@
             android:textColor="@color/black"
             android:textSize="25dp"
             android:textStyle="bold">
-            <!--    android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"-->
+
 
         </TextView>
 
@@ -241,77 +240,79 @@
             android:id="@+id/helpFifty"
             android:layout_width="60dp"
             android:layout_height="45dp"
-            android:layout_gravity="top"
+            android:layout_gravity="center"
             android:layout_marginRight="13dp"
             android:background="@drawable/helpquizfifty"></ImageButton>
     </LinearLayout>
 
     <TextView
         android:id="@+id/tvPoints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="219dp"
+        android:layout_height="43dp"
         android:layout_gravity="center"
         android:text="הנקודות שצברת: 0"
         android:textColor="@color/black"
         android:textSize="23dp"
+        android:gravity="center"
         android:textStyle="bold"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807">
+        app:layout_constraintVertical_bias="0.966">
 
     </TextView>
+
     <LinearLayout
-        android:layout_height="60dp"
-        android:layout_width="match_parent"
         android:id="@+id/LinearLayoutHearts"
-        android:visibility="gone"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
         android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.257">
+
         <ImageView
-            android:layout_height="50dp"
-            android:layout_width="50dp"
-            android:background="@drawable/heartimage"
-            android:layout_margin="7dp"
             android:id="@+id/heartImage3"
-            ></ImageView>
-        <ImageView
-            android:layout_height="50dp"
             android:layout_width="50dp"
-            android:background="@drawable/heartimage"
+            android:layout_height="50dp"
             android:layout_margin="7dp"
+            android:background="@drawable/heartimage"></ImageView>
+
+        <ImageView
             android:id="@+id/heartImage2"
-            ></ImageView>
-        <ImageView
-            android:layout_height="50dp"
             android:layout_width="50dp"
-            android:background="@drawable/heartimage"
+            android:layout_height="50dp"
             android:layout_margin="7dp"
+            android:background="@drawable/heartimage"></ImageView>
+
+        <ImageView
             android:id="@+id/heartImage1"
-            ></ImageView>
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="7dp"
+            android:background="@drawable/heartimage"></ImageView>
     </LinearLayout>
 
-
     <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="80dp"
+        android:layout_width="180dp"
+        android:layout_height="70dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:cardCornerRadius="45dp"
+        android:visibility="visible"
+        android:id="@+id/CardStartQuiz"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94">
+        app:layout_constraintVertical_bias="0.967">
 
 
         <ImageButton

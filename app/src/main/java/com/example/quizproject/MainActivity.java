@@ -134,7 +134,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         } else if (v == btnFinishDialog) {
             Intent it = new Intent();
             if (chosenQuizName.equals("food")) {
-                it = new Intent(this, QuizActivity.class);
+                it = new Intent(MainActivity.this, QuizActivity.class);
                 startActivity(it);
             }
         } else if (btnDisconnect == v) {
